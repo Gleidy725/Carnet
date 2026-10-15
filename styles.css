@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa-fondo: #FFF4F8;
+    --rosa-pastel: #F3D9E8;
+    --lila-pastel: #DCC6EA;
+    --morado: #795477;
+    --colorTipografia: #493746;
+    --fuente-titulos: "Cinzel", serif;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #FCE7F3, #E9D5FF);
+}
+
+h1 {
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--colorTipografia);
+    text-align: center;
+    margin: 10px 0 18px;
+}
+
+h2 {
+    background-color: var(--lila-pastel);
+    color: var(--morado);
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 16px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+
+h3 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--morado);
+    text-align: center;
+    margin: 10px 0 22px;
+}
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    background: var(--rosa-fondo);
+    border: 1px solid var(--lila-pastel);
+    border-radius: 20px;
+
+    width: min(400px, calc(100% - 32px));
+    min-height: 500px;
+    padding: 25px;
+
+    box-shadow: 0 12px 30px rgba(85, 50, 100, 0.22);
+    align-items: column;
+}
+
+.informacion::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 65px;
+    height: 12px;
+    border-radius: 10px;
+
+    background-color: #DCC6EA;
+    border: 1px solid #C8A2C8;
+}
+
+.contacto{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    gap: 25px;
+}
+
+.contacto a{
+    color: var(--morado);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contacto a:hover {
+    color: #B05C91;
+    transform: translateY(-3px);
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    object-fit: cover;
+    border: 4px solid #C084FC;
+    box-shadow: 0 0 0 4px #F3D9E8;
+}
